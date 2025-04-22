@@ -68,23 +68,32 @@
 
 // note ture value convert ke b ad 1 hoti h to false 0 hoga 
 
-let isboolean1 = 1;
-let isboolean2 = "";
-let isboolean3 = "sanjish";
-let isboolean4 = undefined ;
-let isboolean5 = null ;
+// let isboolean1 = 1;
+// let isboolean2 = "";
+// let isboolean3 = "sanjish";
+// let isboolean4 = undefined ;
+// let isboolean5 = null ;
 
-let IsBooleanValue=Boolean(isboolean1)
-console.log(IsBooleanValue);
+// let IsBooleanValue=Boolean(isboolean1)
+// console.log(IsBooleanValue);
 
-let IsBooleanValue2=Boolean(isboolean2)
-console.log(IsBooleanValue2);
+// let IsBooleanValue2=Boolean(isboolean2)
+// console.log(IsBooleanValue2);
 
-let IsBooleanValue3=Boolean(isboolean3)
-console.log(IsBooleanValue3);
+// let IsBooleanValue3=Boolean(isboolean3)
+// console.log(IsBooleanValue3);
 
-let IsBooleanValue4=Boolean(isboolean4)
-console.log(IsBooleanValue4);
+// let IsBooleanValue4=Boolean(isboolean4)
+// console.log(IsBooleanValue4);
 
-let IsBooleanValue5=Boolean(isboolean5)
-console.log(IsBooleanValue5);
+// let IsBooleanValue5=Boolean(isboolean5)
+// console.log(IsBooleanValue5);
+
+
+// **********************operation***********
+
+console.log(1+"2"+3);
+console.log("1"+"2"+3);
+console.log(1+"2"+"3");
+console.log(1+2+"3");
+
