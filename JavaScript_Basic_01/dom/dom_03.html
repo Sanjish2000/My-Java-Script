@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom 03</title>
+    <style>
+        body{
+            background-color: #212121;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+<script>
+    const div=document.createElement('div')
+    div.className="parent"
+    div.id=Math.round(Math.random()*10+1)
+    console.log(div);
+    div.setAttribute("titile","navbar")
+    div.style.backgroundColor="orange"
+    div.style.color="white"
+    div.style.padding="25px"
+    const text=document.createTextNode("HI THIS IS SANJISH CHOUHAN")
+    div.appendChild(text)
+    document.body.appendChild(div)
+    
+</script>
+</html>

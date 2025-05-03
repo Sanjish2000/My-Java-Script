@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom 2</title>
+    <style>
+        body{
+            background-color: #212121;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">MON</div>
+        <div class="child">TUE</div>
+        <div class="child">WED</div>
+        <div class="child">THU</div>
+    </div>
+</body>
+<script>
+    const parent =document.querySelector('.parent')
+    // console.log(parent);
+    // console.log(parent.children);
+    // // const child1 =parent.children[1].innerHTML
+    // // console.log(child1);
+    // console.log(parent.children[0].innerHTML);
+    // for (let index = 0; index < parent.children.length; index++) {
+    //     console.log(parent.children[index].innerHTML);
+        
+        
+    // }  access the child of a parent
+//    console.log(parent.firstElementChild);
+//    console.log(parent.lastElementChild);
+
+// access the parent of child 
+const child=document.querySelector('.child')
+// console.log(child);
+// console.log(child.parentElement);
+// console.log(child.nextElementSibling);
+console.log("NODE :" ,parent.childNodes);
+
+
+
+
+    
+    
+    
+</script>
+</html>

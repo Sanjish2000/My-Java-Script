@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom 04</title>
+    <style>
+        body{background-color: #212121; color: white;}
+        
+    </style>
+</head>
+<body>
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+    
+</body>
+<script>
+
+    const addlanguage=(language)=>{
+        const li=document.createElement('li')
+        const text = document.createTextNode(language)
+        li.appendChild(text)
+        document.querySelector('.language').append(li)
+    }
+addlanguage("python")
+addlanguage("C++")
+addlanguage("java")
+
+// edit 
+const secondlist=document.querySelector('li:nth-child(2)')  //second list ki value ko hold liya
+const newList=document.createElement('li')//new li banaya
+newList.innerText="scripting"//text isert kiya
+secondlist.replaceWith(newList)//apped ni replace kiya 
+
+// remove list 
+
+const lastli=document.querySelector('li:last-child')
+lastli.remove()
+
+</script>
+</html>
