@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(93, 87, 87);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>events</h2>
+    <ul id="event">
+        <li><img width="150px" id="img1" src="https://images.pexels.com/photos/30811017/pexels-photo-30811017/free-photo-of-aerial-view-of-nice-harbor-with-yachts.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="" ></li>
+        <li><img width="150px" id="img2" src="https://images.pexels.com/photos/31802455/pexels-photo-31802455/free-photo-of-curved-modern-building-against-blue-sky.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt=""></li>
+        <li><img width="150px" id="img3" src="https://images.pexels.com/photos/16844777/pexels-photo-16844777/free-photo-of-food-and-cameras-on-a-blanket-on-a-picnic.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt=""></li>
+        <li><img width="150px" id="img4" src="https://images.pexels.com/photos/16844777/pexels-photo-16844777/free-photo-of-food-and-cameras-on-a-blanket-on-a-picnic.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt=""></li>
+        <li><img width="150px" id="img5" src="https://images.pexels.com/photos/16844777/pexels-photo-16844777/free-photo-of-food-and-cameras-on-a-blanket-on-a-picnic.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt=""></li>
+        <li><img width="150px" id="img6" src="https://images.pexels.com/photos/16844777/pexels-photo-16844777/free-photo-of-food-and-cameras-on-a-blanket-on-a-picnic.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt=""></li>
+        <li><a id="google" style="color: aqua;" href="https://www.google.co.in/" target="_blank">google</a></li>
+        
+    </ul>
+</body>
+<script>
+    // events list 
+      // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+
+    // first approch
+// document.querySelector('#img1').onclick=function(){
+//     alert('image1')
+// }
+
+// // second approch 
+// document.querySelector('#event').addEventListener('click',function(){
+//     console.log('click in side the ul');
+    
+// },false)
+// document.querySelector('#img1').addEventListener('click',function(e){
+//     console.log('click first image');
+//     e.stopPropagation()
+// },false)
+
+// document.querySelector('#google').addEventListener('click', function(e){
+//     e.stopPropagation()             //stop bubbling 
+//     console.log("google is click");
+//     e.preventDefault()  //prevent the action
+    
+
+
+// })
+
+document.querySelector('#event').addEventListener('click',function(e){
+
+
+if(e.target.tagName=='IMG'){
+    console.log(e.target.id);
+    
+        console.log(e.target);
+        console.log(e.target.tagName);
+        console.log(e.target.parentNode);
+
+        const removeit=e.target.parentNode
+        removeit.remove()                                 //dono method me hta skte h
+}
+})
+// removeit.parentNode.removeChild(removeit) //dono method me hta skte h
+
+</script>
+</html>

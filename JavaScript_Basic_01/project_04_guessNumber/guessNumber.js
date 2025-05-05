@@ -39,9 +39,7 @@ function validateGuess(guess){
             EndGame()
         }else{
             displayGuess(guess)
-            checkGuess(guess
-
-            )
+            checkGuess(guess)
         }
     }
     //
