@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="team">IPL TEAM</h1>
+    <button id="stop">STOP</button>
+    <button id="start">START</button>
+</body>
+<script>
+const team = document.querySelector('#team');
+
+const names = ['SANJISH', 'VANSH', 'ARUN', 'PRIYA', 'NEHA', 'RAHUL', 'DIVYA', 'ANKIT'];
+
+function generateRandomName() {
+    const randomIndex = Math.floor(Math.random() * names.length);
+    return names[randomIndex];
+}
+
+const myname = function() {
+    const d = new Date();
+    const randomName = generateRandomName();
+    team.innerHTML = `${randomName} ${d.toLocaleTimeString()}`;
+};
+
+let intervalId = setInterval(myname, 1000);
+
+document.querySelector('#stop').addEventListener('click', function () {
+    clearInterval(intervalId);
+    intervalId = null;
+});
+
+document.querySelector('#start').addEventListener('click', function () {
+    if (!intervalId) {
+        intervalId = setInterval(myname, 1000);
+    }
+});
+
+</script>
+</html>

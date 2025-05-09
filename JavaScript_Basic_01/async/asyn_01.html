@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="team">RCB WON THE IPL 2025</h1>
+    <button id="change">CHNAGE WINNER</button>
+</body>
+<script>
+    const notchange=setTimeout(()=>{
+       console.log("please change the winner"); 
+       const changewinner=document.querySelector('#team').innerHTML="csk win"
+        
+    },2000)
+
+   document.querySelector('#change').addEventListener('click',function(){
+    clearTimeout(notchange)
+    console.log("stooped");
+    
+   })
+    
+</script>
+</html>
