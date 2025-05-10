@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Key Event Display</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+    }
+
+    #insert {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease-in-out;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+      font-size: 1.5rem;
+      background-color: white;
+      color: #333;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+
+    th, td {
+      padding: 20px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #3e64ff;
+      color: white;
+      font-weight: bold;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+  </style>
+</head>
+<body>
+  <div id="insert">
+    <h2>Press Any Key...</h2>
+  </div>
+
+  <script>
+    const insert = document.querySelector('#insert');
+    window.addEventListener('keydown', function(e) {
+      insert.innerHTML = `
+        <table>
+          <tr>
+            <th>Key Code</th>
+            <th>Key</th>
+            <th>Code</th>
+          </tr>
+          <tr>
+            <td>${e.keyCode}</td>
+            <td>${e.key === ' ' ? 'Space' : e.key}</td>
+            <td>${e.code}</td>
+          </tr>
+        </table>`;
+    });
+  </script>
+</body>
+</html>
