@@ -68,24 +68,30 @@
 
 //five
 
-const pfive= new Promise(function(resolve,reject){
-    setTimeout(function(){
-        let conneect=false
-        if(!conneect){
-        resolve({name:'JAVASCRIPT',password:'123'})
-        }else{
-            reject('ERORR:JS went wrong')
-        }
-    },1000)
+// const pfive= new Promise(function(resolve,reject){
+//     setTimeout(function(){
+//         let conneect=false
+//         if(!conneect){
+//         resolve({name:'JAVASCRIPT',password:'123'})
+//         }else{
+//             reject('ERORR:JS went wrong')
+//         }
+//     },1000)
+// })
+// async function Consume(){
+//    try {
+//      const data=await pfive
+//     console.log(data.name);
+//    } catch (error) {
+//     console.log(error);
+    
+//    }
+    
+// }
+// Consume()
+
+fetch('https://api.github.com/users/Sanjish2000')
+.then((e=>{return e.json()}))
+.then((e)=>{console.log(e.name);
+}).catch((e)=>{console.log(e);
 })
-async function Consume(){
-   try {
-     const data=await pfive
-    console.log(data.name);
-   } catch (error) {
-    console.log(error);
-    
-   }
-    
-}
-Consume()
