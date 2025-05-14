@@ -95,3 +95,6 @@ fetch('https://api.github.com/users/Sanjish2000')
 .then((e)=>{console.log(e.name);
 }).catch((e)=>{console.log(e);
 })
+
+
+
